@@ -59,10 +59,10 @@ public class WxOAuth2UserInfo implements Serializable {
   @SerializedName("privilege")
   private String[] privileges;
   /**
-   * 是否为快照页模式虚拟账号，值为0时是普通用户，1时是虚拟帐号
+   * is_snapshotuser  是否为快照页模式虚拟账号，值为0时是普通用户，1时是虚拟帐号
    */
   @SerializedName("is_snapshotuser")
-  private Integer snapshotuser;
+  private Integer snapshotUser;
 
   public static WxOAuth2UserInfo fromJson(String json) {
     return WxGsonBuilder.create().fromJson(json, WxOAuth2UserInfo.class);
